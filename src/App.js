@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 
-function App() {
+
+const App = () => {
+  const navigate = useNavigate()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='main' className='container flex p-4 text-center'>
+      <h1>Home page</h1>
+      <Button style={{ width:"12rem"}} onClick={() => navigate("/create")}>Next</Button>
     </div>
   );
 }
