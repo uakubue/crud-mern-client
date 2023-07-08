@@ -49,7 +49,7 @@ useEffect(() => {
         .delete(`/delete/${id}`)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
-
+        
         window.location.reload();
   } 
 
@@ -147,8 +147,6 @@ useEffect(() => {
                     </div>
                 )
         }
-
-        <Button onClick={() => navigate(-1)}>Back</Button>
     </div>
   )
 }
