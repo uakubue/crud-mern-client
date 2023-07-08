@@ -19,7 +19,7 @@ const Posts = () => {
 
 useEffect(() => {
     axios
-        .get("/posts")
+        .get("https://crud-mern-server-y8d9.onrender.com/posts")
         .then((res) => {
             console.log(res);
             setPosts(res.data)
@@ -46,7 +46,7 @@ useEffect(() => {
 
   const deletePost = (id) => {
     axios
-        .delete(`/delete/${id}`)
+        .delete(`https://crud-mern-server-y8d9.onrender.com/delete/${id}`)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
         
@@ -65,7 +65,7 @@ useEffect(() => {
   };
 
   const saveUpdatedPost = () => {
-    axios.put(`/update/${updatedPost._id}`, updatedPost)
+    axios.put(`https://crud-mern-server-y8d9.onrender.com/update/${updatedPost._id}`, updatedPost)
     .then(res => console.log(res))
     .catch(err => console.log(err))
 
