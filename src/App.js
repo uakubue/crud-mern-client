@@ -7,7 +7,7 @@ const App = () => {
   const navigate = useNavigate()
 
   return (
-    <div id='main' className='container flex p-4 text-center'>
+    <div className='container flex p-4 text-center'>
       <h1>Home page</h1>
       <Button style={{ width:"12rem"}} onClick={() => navigate("/create")}>Next</Button>
     </div>
